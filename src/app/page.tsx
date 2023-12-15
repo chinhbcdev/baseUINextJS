@@ -1,22 +1,10 @@
+import Home from '@/views/Home'
+import React from 'react'
 
-import React from "react";
-import { Button, ConfigProvider, Input } from "antd";
+const page = () => {
+  return (
+    <Home/>
+  )
+}
 
-import theme from "../../theme/themeConfig";
-import CustomButton from "./components/CustomButton";
-
-const HomePage = () => (
-  <ConfigProvider theme={theme}>
-    <div className="App">
-      <Button type="primary">Button</Button>
-      <Button type="primary">Button</Button>
-      <Button type="primary">Button</Button>
-      <Input></Input>
-      <hr />
-      <CustomButton>CustomButton</CustomButton>
-      <CustomButton>CustomButton</CustomButton>
-    </div>
-  </ConfigProvider>
-);
-
-export default HomePage;
+export default page
