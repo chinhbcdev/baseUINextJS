@@ -3,6 +3,15 @@ import Image from "next/image";
 import React from "react";
 
 const Header = () => {
+  const data = [
+    { name: "Process", path: "#" },
+    { name: "Challenges", path: "#" },
+    { name: "Community", path: "#" },
+    { name: "Insights", path: "#" },
+    { name: "FAQs", path: "#" },
+    { name: "About", path: "#" },
+    { name: "Contact", path: "#" },
+  ];
   return (
     <header className="mt-[11px] flex justify-between fixed top-0 left-0 right-0 mx-auto max-w-[1428px] z-50">
       <div className="flex items-end">
@@ -12,75 +21,23 @@ const Header = () => {
         </h1>
       </div>
       <div className="flex items-end gap-8">
-        <a
-          href="http://"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#B0B7C3] font-normal text-base"
-        >
-          Process
-        </a>
-        <a
-          href="http://"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#B0B7C3] font-normal text-base"
-        >
-          Process
-        </a>
-        <a
-          href="http://"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#B0B7C3] font-normal text-base"
-        >
-          Process
-        </a>
-        <a
-          href="http://"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#B0B7C3] font-normal text-base"
-        >
-          Process
-        </a>
-        <a
-          href="http://"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#B0B7C3] font-normal text-base"
-        >
-          Process
-        </a>
-        <a
-          href="http://"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#B0B7C3] font-normal text-base"
-        >
-          Process
-        </a>
-        <a
-          href="http://"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#B0B7C3] font-normal text-base"
-        >
-          Process
-        </a>
+        {data.map((item, index) => (
+          <a
+            href="http://"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#B0B7C3] font-normal text-base"
+            key={index}
+          >
+            {item.name}
+          </a>
+        ))}
       </div>
-      <div className="flex items-end">
-        {/* <Button type="primary">Primary Button</Button>
-      <Button>Dashboard</Button> */}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="40"
-          height="40"
-          viewBox="0 0 40 40"
-          fill="none"
-        >
-          <circle cx="20" cy="20" r="19.5" fill="#F1F3F8" stroke="#D6DCE7" />
-        </svg>
+      <div className="flex items-end gap-4">
+         <Button type="primary">Primary Button</Button>
+      <Button>Dashboard</Button> 
+        
+        <img src="/header/ukFlag.png" alt="" />
       </div>
     </header>
   );
